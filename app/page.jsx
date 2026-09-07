@@ -1,0 +1,23 @@
+import Navbar from '../components/Navbar';
+import Hero from '../components/Hero';
+import Benefits from '../components/Benefits';
+import ProductShowcase from '../components/ProductShowcase';
+import AIHighlight from '../components/AIHighlight';
+import FinalCTA from '../components/FinalCTA';
+import Footer from '../components/Footer';
+
+export default function HomePage() {
+  return (
+    <>
+      <Navbar />
+      <main>
+        <Hero />
+        <Benefits />
+        <ProductShowcase />
+        <AIHighlight />
+        <FinalCTA />
+      </main>
+      <Footer />
+    </>
+  );
+}
