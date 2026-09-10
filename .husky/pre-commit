@@ -1,0 +1,8 @@
+GITLEAKS=tools/gitleaks/gitleaks.exe
+
+if [ ! -f "$GITLEAKS" ]; then
+  echo "gitleaks não encontrado. Rode: npm run setup:gitleaks"
+  exit 1
+fi
+
+"$GITLEAKS" protect --staged --redact -v

@@ -39,3 +39,6 @@ next-env.d.ts
 .vscode/*
 !.vscode/extensions.json
 .idea
+
+# gitleaks binary (baixado via npm run setup:gitleaks)
+tools/gitleaks/

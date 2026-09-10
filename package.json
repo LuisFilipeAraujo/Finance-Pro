@@ -6,11 +6,16 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prepare": "husky",
+    "setup:gitleaks": "node scripts/setup-gitleaks.mjs"
   },
   "dependencies": {
     "next": "^16.3.4",
     "react": "^19.3.0",
     "react-dom": "^19.3.0"
+  },
+  "devDependencies": {
+    "husky": "^9.1.7"
   }
 }
