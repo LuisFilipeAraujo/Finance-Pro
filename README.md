@@ -9,14 +9,37 @@ para o produto. Não há dashboard funcional, autenticação, backend, banco de
 dados ou integração com IA — todos os dados exibidos (extrato, gráficos,
 transações) são mockados e puramente ilustrativos.
 
-## Rodando localmente
+## Rodando pela primeira vez
+
+Pré-requisito: Node.js 18.18+ (recomendado 20 LTS ou superior).
 
 ```bash
+# 1. instalar dependências
 npm install
+
+# 2. baixar o gitleaks (necessário uma vez por máquina — usado pelo
+#    pre-commit hook que bloqueia commits com segredos/tokens/API keys)
+npm run setup:gitleaks
+
+# 3. subir o servidor de desenvolvimento
 npm run dev
 ```
 
 Acesse `http://localhost:3000`.
+
+O passo 2 instala o hook via `husky` (já configurado no `prepare` do
+`package.json`, roda automaticamente no `npm install`) e baixa o binário do
+gitleaks para `tools/gitleaks/` (gitignored). Sem isso, o próximo `git commit`
+vai falhar avisando que o gitleaks não foi encontrado — só rodar o comando do
+passo 2 e commitar de novo.
+
+## Outros comandos
+
+```bash
+npm run build   # build de produção
+npm run start   # servidor de produção (após o build)
+npm run lint    # lint
+```
 
 ## Estrutura
 
