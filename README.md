@@ -11,7 +11,7 @@ transações) são mockados e puramente ilustrativos.
 
 ## Rodando pela primeira vez
 
-Pré-requisito: Node.js 18.18+ (recomendado 20 LTS ou superior).
+Pré-requisito: Node.js 20.9+ (recomendado 24 LTS, a mesma versão usada no CI).
 
 ```bash
 # 1. instalar dependências
