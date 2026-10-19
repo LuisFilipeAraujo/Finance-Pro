@@ -1,3 +1,4 @@
+import WaitlistForm from './WaitlistForm';
 import styles from './FinalCTA.module.css';
 
 export default function FinalCTA() {
@@ -8,12 +9,10 @@ export default function FinalCTA() {
           Comece a organizar sua vida financeira hoje.
         </h2>
         <p className={styles.text}>
-          Leva poucos minutos para configurar sua conta e ver seus primeiros
-          números organizados.
+          O Finance Pro está em fase final de desenvolvimento. Entre na lista
+          de espera e seja um dos primeiros a usar.
         </p>
-        <a href="#" className={`btn btn-primary ${styles.cta}`}>
-          Criar minha conta
-        </a>
+        <WaitlistForm />
       </div>
     </section>
   );

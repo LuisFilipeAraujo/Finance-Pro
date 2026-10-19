@@ -1,19 +1,27 @@
 import Image from 'next/image';
+import Link from 'next/link';
+import { navLinks } from './navLinks';
 import styles from './Footer.module.css';
 import logo from '../public/logo.png';
 
 const columns = [
   {
     title: 'Produto',
-    links: ['Benefícios', 'Como funciona', 'Inteligência'],
+    links: navLinks,
   },
   {
     title: 'Empresa',
-    links: ['Sobre', 'Contato'],
+    links: [
+      { href: '/sobre', label: 'Sobre' },
+      { href: '/contato', label: 'Contato' },
+    ],
   },
   {
     title: 'Legal',
-    links: ['Termos de uso', 'Privacidade'],
+    links: [
+      { href: '/termos', label: 'Termos de uso' },
+      { href: '/privacidade', label: 'Privacidade' },
+    ],
   },
 ];
 
@@ -23,7 +31,7 @@ export default function Footer() {
       <div className={`container ${styles.inner}`}>
         <div className={styles.brandCol}>
           <div className={styles.brand}>
-            <Image src={logo} alt="Finance Pro" width={28} height={28} />
+            <Image src={logo} alt="" width={28} height={28} />
             <span>
               finance <em>pro</em>
             </span>
@@ -35,11 +43,11 @@ export default function Footer() {
 
         {columns.map((col) => (
           <div key={col.title} className={styles.col}>
-            <span className={styles.colTitle}>{col.title}</span>
+            <h2 className={styles.colTitle}>{col.title}</h2>
             <ul className={styles.colList}>
               {col.links.map((link) => (
-                <li key={link}>
-                  <a href="#">{link}</a>
+                <li key={link.href}>
+                  <Link href={link.href}>{link.label}</Link>
                 </li>
               ))}
             </ul>

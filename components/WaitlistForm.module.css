@@ -1,0 +1,81 @@
+.form {
+  margin-top: 32px;
+  text-align: left;
+}
+
+.row {
+  display: flex;
+  gap: 10px;
+}
+
+.input {
+  flex: 1;
+  min-width: 0;
+  padding: 13px 16px;
+  font: inherit;
+  font-size: var(--step-0);
+  color: var(--color-ink);
+  background: var(--color-white);
+  border: 1px solid var(--color-line-strong);
+  border-radius: var(--radius-sm);
+}
+
+.input::placeholder {
+  color: var(--color-graphite-soft);
+}
+
+.input:hover {
+  border-color: var(--color-graphite-soft);
+}
+
+.input[aria-invalid] {
+  border-color: #b3261e;
+}
+
+.honeypot {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.message {
+  min-height: 1.6em;
+  margin-top: 10px;
+  font-size: var(--step--1);
+}
+
+.error {
+  color: #b3261e;
+}
+
+.note {
+  font-size: var(--step--1);
+  color: var(--color-graphite-soft);
+}
+
+.note a {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.note a:hover {
+  color: var(--color-ink);
+}
+
+.success {
+  margin-top: 32px;
+  padding: 18px 20px;
+  background: var(--color-white);
+  border: 1px solid var(--color-line);
+  border-left: 3px solid var(--color-forest);
+  border-radius: var(--radius-sm);
+  text-align: left;
+}
+
+@media (max-width: 480px) {
+  .row {
+    flex-direction: column;
+  }
+}
