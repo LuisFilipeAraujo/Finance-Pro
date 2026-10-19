@@ -62,8 +62,14 @@ jobs:
       - name: Instalar dependências (sem scripts)
         run: npm ci --ignore-scripts
 
-      - name: Vulnerabilidades conhecidas
-        run: npm audit --audit-level=high
+      # Dependências de produção: barra a partir de high. As de dev (eslint etc.)
+      # nunca chegam ao bundle e às vezes ficam semanas sem correção upstream
+      # (ex.: braces via eslint-config-next), então só barram em critical.
+      - name: Vulnerabilidades conhecidas (produção)
+        run: npm audit --omit=dev --audit-level=high
+
+      - name: Vulnerabilidades conhecidas (todas, incluindo dev)
+        run: npm audit --audit-level=critical
 
       - name: Assinaturas e proveniência dos pacotes
         run: npm audit signatures

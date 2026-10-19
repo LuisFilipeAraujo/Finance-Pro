@@ -42,3 +42,6 @@ next-env.d.ts
 
 # gitleaks binary (baixado via npm run setup:gitleaks)
 tools/gitleaks/
+
+# lista de espera (e-mails — dado pessoal, nunca versionar)
+/data/
