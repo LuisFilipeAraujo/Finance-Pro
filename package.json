@@ -11,13 +11,13 @@
     "setup:gitleaks": "node scripts/setup-gitleaks.mjs"
   },
   "dependencies": {
-    "next": "^16.3.4",
-    "react": "^19.3.0",
-    "react-dom": "^19.3.0"
+    "next": "^16.4.2",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
   },
   "devDependencies": {
     "eslint": "^9.39.5",
-    "eslint-config-next": "^16.3.4",
+    "eslint-config-next": "^16.4.2",
     "husky": "^9.1.7"
   }
 }
